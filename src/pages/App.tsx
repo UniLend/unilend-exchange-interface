@@ -30,14 +30,14 @@ import Swap from './Swap'
 import { OpenClaimAddressModalAndRedirectToSwap, RedirectPathToSwapOnly, RedirectToSwap } from './Swap/redirects'
 import Vote from './Vote'
 import VotePage from './Vote/VotePage'
-import lightBG from '../assets/images/light-bg.svg'
+// import lightBG from '../assets/images/light-bg.svg'
 
 const AppWrapper = styled.div`
   display: flex;
   flex-flow: column;
   align-items: flex-start;
   overflow-x: hidden;
-  background-image: url(${lightBG});
+  background-image: url(${({ theme }) => theme.bgImage});
 `
 
 const HeaderWrapper = styled.div`
