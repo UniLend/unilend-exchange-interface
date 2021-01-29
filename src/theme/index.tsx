@@ -1,4 +1,4 @@
-import { transparentize } from 'polished'
+// import { transparentize } from 'polished'
 import React, { useMemo } from 'react'
 import styled, {
   ThemeProvider as StyledComponentsThemeProvider,
@@ -9,7 +9,8 @@ import styled, {
 import { useIsDarkMode } from '../state/user/hooks'
 import { Text, TextProps } from 'rebass'
 import { Colors } from './styled'
-
+import lightBG from '../assets/images/light-bg.svg'
+import darkBG from '../assets/images/dark-bg.svg'
 export * from './components'
 
 const MEDIA_WIDTHS = {
@@ -52,11 +53,16 @@ export function colors(darkMode: boolean): Colors {
     bg2: darkMode ? '#2C2F36' : '#F7F8FA',
     bg3: darkMode ? '#40444F' : '#EDEEF2',
     bg4: darkMode ? '#565A69' : '#CED0D9',
-    bg5: darkMode ? '#6C7284' : '#888D9B',
-
+    bg5: darkMode ? '#6C7284' : 'linear-gradient(180deg, #BED4FF 0%, #BED4FF 50%, #dce5f7de 102%)',
     //specialty colors
     modalBG: darkMode ? 'rgba(0,0,0,.425)' : 'rgba(0,0,0,0.3)',
     advancedBG: darkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
+
+    bgImage: darkMode ? darkBG : lightBG,
+
+    gradientBG1: darkMode ? '#111' : '#BED4FF',
+    gradientBG2: darkMode ? '#111' : '#BED4FF',
+    gradientBG3: darkMode ? '#111' : '#dce5f7de',
 
     //primary colors
     primary1: darkMode ? '#2172E5' : '#ff007a',
@@ -224,12 +230,9 @@ html {
 
 body {
   min-height: 100vh;
-  background-position: 0 -30vh;
-  background-repeat: no-repeat;
+  // background-position: 0 -30vh;
+  // background-repeat: no-repeat;
   background-image: ${({ theme }) =>
-    `radial-gradient(50% 50% at 50% 50%, ${transparentize(0.9, theme.primary1)} 0%, ${transparentize(
-      1,
-      theme.bg1
-    )} 100%)`};
+    `linear-gradient(180deg, ${theme.gradientBG1} 0%, ${theme.gradientBG2} 50%, ${theme.gradientBG3} 102%);`};
 }
 `

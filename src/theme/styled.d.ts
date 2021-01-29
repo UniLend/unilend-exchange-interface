@@ -23,6 +23,12 @@ export interface Colors {
   modalBG: Color
   advancedBG: Color
 
+  bgImage: any
+
+  gradientBG1: Color
+  gradientBG2: Color
+  gradientBG3: Color
+
   //blues
   primary1: Color
   primary2: Color
