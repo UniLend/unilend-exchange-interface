@@ -32,7 +32,7 @@ import usePrevious from '../../hooks/usePrevious'
 
 const HeaderFrame = styled.div`
   display: grid;
-  background: ${({ theme }) => theme.bg3} !important;
+  background: ${({ theme }) => theme.bg8} !important;
   grid-template-columns: 1fr 120px;
   align-items: center;
   justify-content: space-between;

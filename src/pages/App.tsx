@@ -38,6 +38,8 @@ const AppWrapper = styled.div`
   align-items: flex-start;
   overflow-x: hidden;
   background-image: url(${({ theme }) => theme.bgImage});
+  background-size: cover;
+  height: 100vh;
 `
 
 const HeaderWrapper = styled.div`

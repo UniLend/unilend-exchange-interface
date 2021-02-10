@@ -19,12 +19,14 @@ export interface Colors {
   bg3: Color
   bg4: Color
   bg5: Color
-
+  bg6: Color
+  bg7: Color
+  bg8: Color
   modalBG: Color
   advancedBG: Color
 
   bgImage: any
-
+  cardBorder: Color
   gradientBG1: Color
   gradientBG2: Color
   gradientBG3: Color

@@ -49,20 +49,25 @@ export function colors(darkMode: boolean): Colors {
     text5: darkMode ? '#2C2F36' : '#EDEEF2',
 
     // backgrounds / greys
-    bg1: darkMode ? '#212429' : '#FFFFFF',
+    bg1: darkMode ? '#2b3b59' : '#FFFFFF',
     bg2: darkMode ? '#2C2F36' : '#F7F8FA',
-    bg3: darkMode ? '#40444F' : '#EDEEF2',
+    bg3: darkMode ? '#2F4F74' : '#EDEEF2',
     bg4: darkMode ? '#565A69' : '#CED0D9',
     bg5: darkMode ? '#6C7284' : 'linear-gradient(180deg, #BED4FF 0%, #BED4FF 50%, #dce5f7de 102%)',
+    bg6: darkMode ? '#2F4774' : '#F2F4FA',
+    bg7: darkMode ? '#283754' : 'transparent',
+    bg8: darkMode ? '#2E384A' : '#F3F5F9',
     //specialty colors
     modalBG: darkMode ? 'rgba(0,0,0,.425)' : 'rgba(0,0,0,0.3)',
     advancedBG: darkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
 
     bgImage: darkMode ? darkBG : lightBG,
 
-    gradientBG1: darkMode ? '#111' : '#BED4FF',
-    gradientBG2: darkMode ? '#111' : '#BED4FF',
-    gradientBG3: darkMode ? '#111' : '#dce5f7de',
+    cardBorder: darkMode ? '#23488c' : 'transparent',
+
+    gradientBG1: darkMode ? '#273041' : '#BED4FF',
+    gradientBG2: darkMode ? '#273041' : '#BED4FF',
+    gradientBG3: darkMode ? '#273041' : '#dce5f7de',
 
     //primary colors
     primary1: darkMode ? '#2172E5' : '#ff007a',

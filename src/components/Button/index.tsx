@@ -16,7 +16,7 @@ const Base = styled(RebassButton)<{
   width: ${({ width }) => (width ? width : '100%')};
   font-weight: 500;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 10px;
   border-radius: ${({ borderRadius }) => borderRadius && borderRadius};
   outline: none;
   border: 1px solid transparent;
@@ -37,7 +37,13 @@ const Base = styled(RebassButton)<{
     user-select: none;
   }
 `
-
+export const ButtonCustom = styled(Base)`
+  background-color: #2f4f74;
+  &:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+  }
+`
 export const ButtonPrimary = styled(Base)`
   background-color: ${({ theme }) => theme.primary1};
   color: white;
@@ -285,7 +291,7 @@ export function ButtonConfirmed({
   if (confirmed) {
     return <ButtonConfirmedStyle {...rest} />
   } else {
-    return <ButtonPrimary {...rest} altDisabledStyle={altDisabledStyle} />
+    return <ButtonCustom {...rest} altDisabledStyle={altDisabledStyle} />
   }
 }
 
@@ -293,7 +299,7 @@ export function ButtonError({ error, ...rest }: { error?: boolean } & ButtonProp
   if (error) {
     return <ButtonErrorStyle {...rest} />
   } else {
-    return <ButtonPrimary {...rest} />
+    return <ButtonCustom {...rest} />
   }
 }
 
